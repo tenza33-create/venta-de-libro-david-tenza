@@ -528,19 +528,39 @@ textarea {
   .hero-shell {
     grid-template-columns: 1fr;
     min-height: auto;
+    width: min(1120px, 92vw);
+    padding-block: 1rem 0;
   }
 
   .hero-art {
     order: -1;
   }
+
+  .hero-art img {
+    width: min(100%, 360px);
+  }
 }
 
 @media (max-width: 640px) {
+  main {
+    width: min(1120px, calc(100vw - 1.25rem));
+  }
+
   .topbar {
     padding-top: 0.85rem;
     padding-bottom: 0.85rem;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .topbar nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-size: 1.1rem;
   }
 
   .book-grid {
@@ -549,15 +569,54 @@ textarea {
 
   .hero {
     min-height: auto;
-    padding-top: 1.5rem;
+    padding: 1rem 0 1.5rem;
   }
 
   .hero-shell {
-    width: min(1120px, 92vw);
+    width: min(1120px, calc(100vw - 1.25rem));
+    gap: 1rem;
+  }
+
+  .hero-copy {
+    text-align: left;
+  }
+
+  .hero-art img {
+    width: min(100%, 300px);
+    border-radius: 20px;
   }
 
   h1 {
-    max-width: 10ch;
+    max-width: 9ch;
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .hero-points {
+    gap: 0.5rem;
+  }
+
+  .hero-points span {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.55rem 0.8rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .proof-strip {
+    margin-bottom: 1.25rem;
   }
 
   .proof-strip,
@@ -565,10 +624,51 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .offer-banner,
+  .contact-form,
+  .quote-card,
+  .benefit-card,
+  .proof-strip article,
+  .faq-list details {
+    border-radius: 16px;
+  }
+
+  .offer-banner {
+    padding: 1rem;
+  }
+
+  .offer-banner .btn {
+    width: 100%;
+  }
+
+  .section-head h2,
+  .author h2,
+  .contact h2,
+  .offer-banner h2,
+  .benefits h2,
+  .faq h2 {
+    font-size: clamp(1.65rem, 8vw, 2.2rem);
+  }
+
+  .author,
+  .contact,
+  .benefits,
+  .faq,
+  .books {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .book-body h3 {
+    font-size: 1.35rem;
+  }
+
   .sticky-buy {
-    left: 1rem;
-    right: 1rem;
+    left: 0.625rem;
+    right: 0.625rem;
+    bottom: 0.75rem;
     min-width: auto;
     text-align: center;
+    padding: 0.85rem 1rem;
   }
 }

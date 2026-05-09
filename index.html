@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubre los 3 libros escritos por un joven autor y consigue tu ejemplar hoy."
+    />
+    <title>Libros de David Tenza | Historias que inspiran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="topbar">
+      <a class="brand" href="#inicio">Libros de David Tenza</a>
+      <nav>
+        <a href="#libros">Libros</a>
+        <a href="#autor">Autor</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <p class="eyebrow">Autor joven, talento real</p>
+        <h1>Tres libros. Una voz nueva que vale la pena leer.</h1>
+        <p class="lead">
+          Historias creadas por un joven escritor con imaginación, sensibilidad y una forma
+          de contar que conecta con lectores de todas las edades.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#libros">Ver libros</a>
+          <a class="btn btn-outline" id="heroWhatsapp" href="#">Comprar por WhatsApp</a>
+        </div>
+      </section>
+
+      <section class="books" id="libros">
+        <div class="section-head">
+          <h2>Los 3 libros</h2>
+          <p>Selecciona tu favorito o llévate la colección completa.</p>
+        </div>
+        <div class="book-grid" id="bookGrid"></div>
+      </section>
+
+      <section class="author" id="autor">
+        <div>
+          <p class="eyebrow">Sobre el autor</p>
+          <h2>Una historia que empieza temprano</h2>
+          <p>
+            David Tenza comenzó a escribir siendo niño y convirtió su pasión en tres libros
+            publicados. Cada obra refleja creatividad, constancia y ganas de inspirar a
+            otros jóvenes a creer en su voz.
+          </p>
+          <p>
+            Si buscas lectura fresca, auténtica y con corazón, aquí encontrarás una gran
+            opción para regalar o disfrutar en familia.
+          </p>
+        </div>
+        <aside class="quote-card">
+          <p>
+            "Escribir me ayuda a transformar ideas en mundos donde todo puede pasar."
+          </p>
+          <span>- David Tenza, autor</span>
+        </aside>
+      </section>
+
+      <section class="contact" id="contacto">
+        <div>
+          <h2>Haz tu pedido o solicita más información</h2>
+          <p>
+            Completa el formulario y recibirás una respuesta rápida para compra, envíos y
+            promociones.
+          </p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <label>
+            Nombre
+            <input type="text" name="nombre" required />
+          </label>
+          <label>
+            Correo
+            <input type="email" name="correo" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-solid">Enviar mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Libros de David Tenza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

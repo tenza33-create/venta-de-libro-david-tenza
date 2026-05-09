@@ -120,6 +120,29 @@ h1 {
   flex-wrap: wrap;
 }
 
+.hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.hero-points span,
+.proof-strip article,
+.benefit-card,
+.faq-list details,
+.offer-banner {
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero-points span {
+  background: rgba(255, 250, 243, 0.85);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -151,6 +174,53 @@ h1 {
 
 .books {
   padding: 1rem 0 2.5rem;
+}
+
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.proof-strip article {
+  background: rgba(255, 250, 243, 0.85);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.proof-strip strong,
+.benefit-card h3 {
+  display: block;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.45rem;
+}
+
+.proof-strip span {
+  color: var(--muted);
+}
+
+.offer-banner {
+  display: grid;
+  grid-template-columns: 1.5fr auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 0 2rem;
+  padding: 1.2rem;
+  border-radius: calc(var(--radius) + 4px);
+  background: linear-gradient(135deg, rgba(15, 107, 98, 0.12), rgba(205, 90, 39, 0.14));
+}
+
+.offer-banner h2,
+.benefits h2,
+.faq h2 {
+  margin: 0.2rem 0 0;
+  font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+}
+
+.offer-banner p {
+  margin-bottom: 0;
 }
 
 .section-head h2,
@@ -262,6 +332,52 @@ h1 {
   align-items: start;
 }
 
+.benefits,
+.faq {
+  margin: 2rem 0;
+}
+
+.benefit-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.benefit-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.1rem;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.faq-list {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq-list details {
+  background: #fff;
+  border-radius: 16px;
+  padding: 0.95rem 1rem;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.1rem;
+}
+
+.faq-list p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
 .quote-card {
   margin: 0;
   border: 1px solid var(--line);
@@ -314,6 +430,25 @@ textarea {
   color: var(--muted);
 }
 
+.sticky-buy {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  background: var(--accent-2);
+  color: #fff;
+  text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  box-shadow: 0 16px 28px rgba(15, 107, 98, 0.28);
+}
+
 @keyframes rise {
   from {
     transform: translateY(22px);
@@ -326,10 +461,13 @@ textarea {
 }
 
 @media (max-width: 920px) {
+  .proof-strip,
+  .benefit-grid,
   .book-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .offer-banner,
   .author,
   .contact {
     grid-template-columns: 1fr;
@@ -350,5 +488,17 @@ textarea {
 
   .hero {
     padding-top: 2.5rem;
+  }
+
+  .proof-strip,
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky-buy {
+    left: 1rem;
+    right: 1rem;
+    min-width: auto;
+    text-align: center;
   }
 }

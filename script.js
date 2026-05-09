@@ -30,6 +30,8 @@ const config = {
 
 const bookGrid = document.getElementById("bookGrid");
 const heroWhatsapp = document.getElementById("heroWhatsapp");
+const bundleWhatsapp = document.getElementById("bundleWhatsapp");
+const stickyWhatsapp = document.getElementById("stickyWhatsapp");
 const yearEl = document.getElementById("year");
 const contactForm = document.getElementById("contactForm");
 
@@ -82,6 +84,19 @@ function bindStaticLinks() {
   heroWhatsapp.href = whatsappLink("Hola, me interesa comprar los libros de David Tenza");
   heroWhatsapp.target = "_blank";
   heroWhatsapp.rel = "noopener noreferrer";
+
+  bundleWhatsapp.href = whatsappLink(
+    "Hola, me interesa comprar la coleccion completa de libros de David Tenza"
+  );
+  bundleWhatsapp.target = "_blank";
+  bundleWhatsapp.rel = "noopener noreferrer";
+
+  stickyWhatsapp.href = whatsappLink(
+    "Hola, quiero informacion para comprar los libros de David Tenza"
+  );
+  stickyWhatsapp.target = "_blank";
+  stickyWhatsapp.rel = "noopener noreferrer";
+
   yearEl.textContent = String(new Date().getFullYear());
 }
 
